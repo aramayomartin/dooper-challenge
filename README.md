@@ -1,9 +1,8 @@
 # Dooper - Technical Test
 
-Hola!
+Hi!
 
-Thank you for your interest in joining our team and taking the time to complete this technical test.
-Once completed, please reply to our email with a link to a Github repository. Make sure the application builds and works successfully.
+Thanks for opportunity to show my job as a developer.
 
 ## Challenge
 
@@ -15,42 +14,49 @@ You will be creating a Movie Awards Ballot with the following requirements:
 - Upon submission, display a modal box showing your votes
 - When the modal is closed, the ballot resets and you can vote again.
 
-### Mockups
+## Obtained Result
+### Main Page
+![Wireframe](src/ReadmeImages/obtained_result.png?raw=true 'Wireframe')
+## Notifications implemented
+![Wireframe](src/ReadmeImages/succes.png?raw=true 'Wireframe')
+![Wireframe](src/ReadmeImages/warning.png?raw=true 'Wireframe')
+![Wireframe](src/ReadmeImages/removed.png?raw=true 'Wireframe')
+## Modal after submit selected movies
+![Wireframe](src/ReadmeImages/modal.png?raw=true 'Wireframe')
+### Responsive designs
+![Wireframe](src/ReadmeImages/main_mobile.png?raw=true 'Wireframe')
+![Wireframe](src/ReadmeImages/notifications.png?raw=true 'Wireframe')
+![Wireframe](src/ReadmeImages/modal_mobile.png?raw=true 'Wireframe')
 
-![Wireframe](src/mockup.png?raw=true 'Wireframe')
+Note: I choose a minimalist design for the modal in mobile view because in another way it has too much information in a little space.
 
-### Evaluation
+### Used Technologies
 
-1.- Knowledge of component modularization (code reusability, best practices, folder structure)
+1.- React.js
 
-2.- React Hooks
+2.- Express.js
 
-3.- Use of state management (ie. context, react-redux, etc)
+3.- React-context
 
-4.- Use of API requests (http://localhost:8080/api/movies)
+4.- React-query (query and mutations)
 
-5.- Responsiveness (mobile-friendly)
+5.- Styled components
 
-6.- User friendly
+6.- Axios
 
-**Bonus points:**
+7.- ES (async-await to handle asyncronus code)
 
-- Use of Typescript
-- Make it look pretty (styling), show off your creative side!
-- Add Unit testing
+8.- React hooks
 
-Feel free to use any third-party libraries that may help you accomplish the challenge.
+9.- Jest to test.
+
+10.- Typescript to frontend and JavaScript to backend developments
+
+11.- Git flow to code versioning
+
+11.- Use of externed libraries
 
 ### Instructions
-
-Clone our repository
-
-Make sure you have installed
-
-- Node
-- NPM / Yarn
-
-Run:
 
 ### `yarn install`
 
@@ -58,27 +64,28 @@ Install dependencies
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Runs the app in [http://localhost:3000]
 
 ### `yarn api`
 
-Runs the server on http://localhost:8080/ with the endpoint http://localhost:8080/api/movies which returns the list of movies
+Runs the server on [http://localhost:8080/]
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run frontend tests
 
-### `yarn build`
+### `yarn test-api`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run backend tests
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Brief explanation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+All the application was developed using React (typescript) to frontend and Express (javascript) to backend.
+
+Backend: I've created a Movies folder where are route related to movies (if the app will be expanded), data generator (usually we use data from a database but in this case, we are using hardcoded data) and controllers (there are two, one per each endpoint).
+
+Frontend: I've created a client to consume the api and make the http request. Personalized hooks to use the client and finally components where I use the hooks to obtain data using axios, react-query and async-await to manage the asyncronus code. 
+
+To styling I've used styled components. To have a responsive design I've used media queries to a screen with less than 540px. To make 100% responsive I would have to follow a standard in screens (phone, tablet, desktop, etc).
+
+Finally to test my components I've created a TestProvider in the front. Always using axios to mock requests and jest to make assertions.
