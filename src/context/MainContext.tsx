@@ -48,7 +48,6 @@ export const MainContextProvider: React.FC = ({ children }: any) => {
   };
 
   function setSearchedMovies(movies: any): void {
-    console.log("Estoy tratando de setear estos resultados: ", movies);
     setState({
       ...state,
       searchedMovies: movies,

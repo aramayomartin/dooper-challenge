@@ -86,6 +86,6 @@ Backend: I've created a Movies folder where are route related to movies (if the 
 
 Frontend: I've created a client to consume the api and make the http request. Personalized hooks to use the client and finally components where I use the hooks to obtain data using axios, react-query and async-await to manage the asyncronus code. 
 
-To styling I've used styled components.
+To styling I've used styled components. To have a responsive design I've used media queries to a screen with less than 540px. To make 100% responsive I would have to follow a standard in screens (phone, tablet, desktop, etc).
 
 Finally to test my components I've created a TestProvider in the front. Always using axios to mock requests and jest to make assertions.
